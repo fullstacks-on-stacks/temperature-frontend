@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function TemperatureItem({ location }) {
+  console.log(location)
   return (
     <li>
-      <h2>{location.name}</h2>
-      <p>some temperature</p>
+      <p>{location.name}</p>
     </li>
   );
 }

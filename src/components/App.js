@@ -1,5 +1,6 @@
 import React from 'react';
 import { getLocation, getTemperature } from '../services/temperatureApi';
+import Temperatures from './containers/Temperatures';
 
 export default function App() {
   getLocation()
@@ -8,5 +9,10 @@ export default function App() {
   getTemperature()
     .then(res => console.log(res));
     
-  return <h1>Hello World</h1>;
+  return (
+    <>
+    < Temperatures />
+    </>
+
+  );
 }
