@@ -11,7 +11,7 @@ import { getAllTemperatures } from '../../selectors/temperatureSelector';
 class Temperatures extends PureComponent {
   static propTypes = {
     fetch: PropTypes.func.isRequired,
-    locations: PropTypes.array.isRequired
+    temperatures: PropTypes.array.isRequired
   }
 
   componentDidMount(){
@@ -19,16 +19,16 @@ class Temperatures extends PureComponent {
   }
 
   render() {
-    const { locations } = this.props;
+    const { temperatures } = this.props;
 
     return ( 
-      <TemperatureList locations={locations} />
+      <TemperatureList temperatures={temperatures} />
     );
   }
 }
 
 const mapStateToProps = state => ({
-  locations: getAllTemperatures(state)
+  temperatures: getAllTemperatures(state)
 });
 
 const mapDispatchToProps = dispatch => ({

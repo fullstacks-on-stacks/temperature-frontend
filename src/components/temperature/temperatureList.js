@@ -2,21 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TemperatureItem from './temperatureItem';
 
-function TemperatureList({ locations }) {
-  const locationList = locations.map((location) => {
-    return <TemperatureItem key={location.name} location={location} />;
+function TemperatureList({ temperatures }) {
+  const temperatureList = temperatures.map((temperature) => {
+    return <TemperatureItem key={temperature._id} temperature={temperature} />;
   });
 
   return (
     <ul>
-      {locationList}
+      {temperatureList}
     </ul>
   );
 
 } 
 
 TemperatureList.propTypes = {
-  locations: PropTypes.array
+  temperatures: PropTypes.array
 };
 
 export default TemperatureList;

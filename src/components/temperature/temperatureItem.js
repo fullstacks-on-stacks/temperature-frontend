@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function TemperatureItem({ location }) {
-  console.log(location)
+function TemperatureItem({ temperature }) {
   return (
     <li>
-      <p>{location.name}</p>
+      <p>{temperature.temperature}</p>
     </li>
   );
 }
 
 TemperatureItem.propTypes = {
-  location: PropTypes.object
+  temperature: PropTypes.object
 };
 
 export default TemperatureItem;
